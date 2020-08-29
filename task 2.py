@@ -2,10 +2,10 @@
 seconds = int(input("Введите время в секундах  "))
 
 # основной скрипт
-hh = seconds / 3600
-rest = seconds - (int(hh) * 3600)
-mm = int(rest) / 60
-ss = int(rest) - int(mm) * 60
+hh = seconds // 3600
+rest = seconds - hh * 3600
+mm = rest // 60
+ss = rest - mm * 60
 
 # финальный вывод
-print(f"Вот ваше время в формате [чч:мм:сс] - {int(hh):03d}:{int(mm):03d}:{int(ss):03d}")
+print(f"Вот ваше время в формате [чч:мм:сс] - {int(hh):02d}:{int(mm):02d}:{int(ss):02d}")
